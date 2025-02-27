@@ -1,0 +1,111 @@
+<!-- ...existing code... -->
+
+<div id="appointments" class="section" style="display:none;">
+    <h1>GESTIONE APPUNTAMENTI</h1>
+    <div class="filters">
+        <label for="sortCriteria">Ordina per:</label>
+        <select id="sortCriteria" title="Ordina per">
+            <option value="date">Data</option>
+            <option value="collaborator">Collaboratore</option>
+        </select>
+
+        <label for="sortOrder">Ordine:</label>
+        <select id="sortOrder" title="Ordine">
+            <option value="asc">Crescente</option>
+            <option value="desc">Decrescente</option>
+        </select>
+    </div>
+
+    <div class="view-filters">
+        <label for="viewFilter">Filtra per:</label>
+        <select id="viewFilter" title="Filtra per" onchange="applyViewFilter(this.value)">
+            <option value="chronologicalAsc">Cronologico Crescente</option>
+            <option value="chronologicalDesc">Cronologico Decrescente</option>
+            <option value="collaborator">Collaboratore</option>
+            <option value="month">Mese</option>
+        </select>
+    </div>
+
+    <!-- ...existing code... -->
+
+    <div class="arrival-options">
+        <label for="arrivalOption">Opzione di arrivo:</label>
+        <select id="arrivalOption" title="Opzione di arrivo" onchange="handleArrivalOptionChange(this.value)">
+            <option value="default">Seleziona</option>
+            <option value="macchina">Macchina</option>
+            <!-- ...existing options... -->
+        </select>
+    </div>
+
+    <div class="arrival-time">
+        <label for="arrivalTime">Orario di arrivo:</label>
+        <input type="time" id="arrivalTime" title="Inserisci l'orario di arrivo" placeholder="HH:MM" onchange="calculateArrivalTime()">
+    </div>
+
+    <div class="appointment-time">
+        <label for="appointmentTime">Orario dell'appuntamento:</label>
+        <input type="time" id="appointmentTime" title="Inserisci l'orario dell'appuntamento" placeholder="HH:MM">
+    </div>
+
+    <div class="case-select">
+        <label for="caseSelect">Seleziona casa:</label>
+        <select id="caseSelect" title="Seleziona casa" onchange="updateName()">
+            <option value="">Seleziona casa</option>
+            <!-- ...existing options... -->
+        </select>
+    </div>
+
+    <div class="arrival-mode">
+        <label for="arrivalMode">Modalità di arrivo:</label>
+        <select id="arrivalMode" title="Modalità di arrivo" onchange="calculateArrivalTime()">
+            <!-- ...existing options... -->
+        </select>
+    </div>
+
+    <div class="transport">
+        <label for="transport">Trasporto:</label>
+        <select id="transport" title="Trasporto" onchange="calculateArrivalTime()">
+            <!-- ...existing options... -->
+        </select>
+    </div>
+
+    <div class="collaborator-select">
+        <label for="collaboratorSelect">Seleziona collaboratore:</label>
+        <select id="collaboratorSelect" title="Seleziona collaboratore">
+            <!-- ...existing options... -->
+        </select>
+    </div>
+
+    <div class="week-navigation">
+        <button type="button" onclick="changeWeek(-1)">Settimana Precedente</button>
+        <button type="button" onclick="changeWeek(1)">Settimana Successiva</button>
+    </div>
+
+    <div class="appointment-actions">
+        <button type="button" onclick="addAppointment()">Aggiungi Appuntamento</button>
+        <button type="button" onclick="editAppointment(1740645162459)">Modifica</button>
+        <button type="button" onclick="deleteAppointment(1740645162459)">Elimina</button>
+        <button type="button" onclick="editAppointment(1740645181131)">Modifica</button>
+        <button type="button" onclick="deleteAppointment(1740645181131)">Elimina</button>
+    </div>
+
+    <div class="case-actions">
+        <button type="button" onclick="addCase()">Aggiungi Casa</button>
+    </div>
+
+    <div class="collaborator-actions">
+        <button type="button" onclick="addCollaboratore()">Aggiungi Collaboratore</button>
+    </div>
+
+    <div class="data-actions">
+        <button type="button" onclick="saveData()">Save</button>
+        <button type="button" onclick="loadData()">Load</button>
+    </div>
+
+    <div class="date-input">
+        <label for="date">Data:</label>
+        <input type="date" id="date" title="Inserisci la data" placeholder="YYYY-MM-DD">
+    </div>
+
+    <!-- ...existing code... -->
+</div>

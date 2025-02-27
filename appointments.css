@@ -1,0 +1,19 @@
+.filters, .view-filters {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filters label, .view-filters label {
+    margin-right: 10px;
+}
+
+.filters select, .view-filters select {
+    margin-right: 20px;
+    padding: 5px;
+    font-size: 14px;
+}
