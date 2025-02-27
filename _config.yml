@@ -1,0 +1,11 @@
+# Impostazioni generali
+title: Gestione Appuntamenti
+baseurl: "" # imposta questa voce se il sito non è alla radice del dominio
+url: "https://Freddysuperwonder.github.io/Planning-5.6" # URL del tuo sito
+
+# Impostazioni di Jekyll
+markdown: kramdown
+theme: minima
+
+# Struttura dei permalink
+permalink: /:categories/:year/:month/:day/:title:output_ext
